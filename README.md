@@ -1,5 +1,5 @@
 # DISEÑADOR MULTIMEDIA X
-## Sitio Web Responsivo Diseñador multimedia x.
+## Sitio Web Responsivo Diseñador Multimedia X.
 
 - Sitio web responsivo usando html, css y javascript.
 - Animación en cada sección.
