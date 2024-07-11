@@ -105,11 +105,15 @@
             </div>
             <div class="skill"  aos-init data-aos="fade-up">
                 <h3>Computación gráfica</h3>
-                <p>Photoshop <br /> Photopea</p>
+                <p>Photoshop <br> Photopea</p>
             </div>
             <div class="skill"  aos-init data-aos="fade-up">
                 <h3>Computación vectorial</h3>
                 <p>Illustrator</p>
+            </div>
+            <div class="skill"  aos-init data-aos="fade-up">
+                <h3>Fotografia</h3>
+                <p>Tipologia de angulos <br> Tipologia de planos <br> Triangulo de exposición <br> Triangulo de iluminación</p>
             </div>
         </div>
     </section>
@@ -126,12 +130,12 @@
         <div class="materia" id="1"><br><br><br><br><br>
             <h2 aos-init data-aos="fade-left">Programación I</h2>
             <p aos-init data-aos="fade-up">En la materia de programación comenzamos desarrollando
-                 nuestra lógica de programación usando Pseint.<br>
+                nuestra lógica de programación usando Pseint.<br>
                 Tras desarrollar esa lógica comenzamos con el lenguaje de programación Java.</p>
 
             <h3 aos-init data-aos="fade-right">Hola mundo</h3>
-            <p aos-init data-aos="fade-up">Para nuestro primer programa comenzamos con lo más básico de un lenguaje, 
-                el famoso hola mundo.</p>  
+            <p aos-init data-aos="fade-up">El objetivo principal de un "Hola Mundo" es verificar que el entorno de desarrollo esté configurado correctamente, <br>
+                y que el lenguaje de programación esté instalado adecuadamente.</p>  
 
             <div class="consola" aos-init data-aos="fade-up">
                 <pre><code>
@@ -144,8 +148,8 @@ public class Main {
             </div><br>
 
             <h3 aos-init data-aos="fade-right">Entrada y salida de datos</h3>
-            <p aos-init data-aos="fade-up">Para este proyecto usamos la clase Scanner para la entrada de datos,<br>
-                y para la salida el metodo System.out.print().</p>  
+            <p aos-init data-aos="fade-up"> la entrada y salida de datos se maneja principalmente a través de las clases proporcionadas por la API estándar, <br>
+                como Scanner para la entrada de datos y System.out para la salida de datos.</p>  
 
             <div class="consola" aos-init data-aos="fade-up">
                 <pre><code>
@@ -157,17 +161,77 @@ public class Main {
         System.out.print("Ingrese su nombre: ");
         String nombre=e.nextLine();
 
-        System.out.println("Su nombre es: "+nombre);
+        System.out.print("Su nombre es: "+nombre);
     }
 }
-
                  </code></pre>
             </div><br>
 
-            <h3 aos-init data-aos="fade-left">Operadores aritmeticos</h3>
-            <p aos-init data-aos="fade-up">Para este proyecto se uso 2 variables para la entrada de los valores,<br>
-            para luego aplicar operadores aritmeticos, y posteriormente mostrar el resultado.<br>
-            El programa es una calculadora que realiza operaciones de adición, sustracción, producto y división.</p>
+            <h3 aos-init data-aos="fade-right">Variable - Constante</h3>
+            <p aos-init data-aos="fade-up">Una variable es un espacio de memoria con un nombre específico que se utiliza para almacenar datos, <br> 
+                 que pueden cambiar durante la ejecución del programa. <br> 
+                 Un constante es un valor que no cambia durante la ejecución de un programa.</p>  
+
+            <div class="consola" aos-init data-aos="fade-up">
+                <pre><code>
+public class Main {
+    public static void main(String[] args) {
+
+        // Variable
+        int edad;
+        edad = 30;
+        System.out.println("La edad es: " + edad);
+
+        edad = 31;
+        System.out.println("Ahora la edad es: " + edad);
+
+        // Constante
+        final int  gestion = 2024;;
+        System.out.println("La gestion es: " + gestion);
+
+        gestion = 2025;
+        System.out.println("Ahora la gestion es: " + gestion);
+        // Al ser una constante no se puede modificar su valor por ende el IDE nos mostrara error.
+    }
+}
+                </code></pre>
+            </div><br>           
+
+
+                 <h3 aos-init data-aos="fade-right">Tipos de datos</h3>
+                 <p aos-init data-aos="fade-up">Los tipos de datos representan los diferentes tipos de valores que pueden ser almacenados y manipulados en un programa.</p>
+                 <div class="consola" aos-init data-aos="fade-up">
+                     <pre><code>
+public class Main {
+         public static void main(String[] args) {
+             //Tipo de dato entero
+             byte edad = 26;
+             short usuario = 2609;
+             int ci = 8505484;
+             long numero = 64846140L;
+             //Tipo de dato flotante o decimal
+             float peso = 70.4f;
+             double altura = 1.73;
+             //Tipo de dato caracter
+             char inicial = 'L';
+             //Tipo de dato flotante
+             boolean mayorDeEdad = true;
+             
+             System.out.println("\n Edad: "+ edad +
+                                "\n Usuario: " + usuario +
+                                "\n Ci: " + ci +
+                                "\n Numero: " + numero +
+                                "\n Peso: " + peso +
+                                "\n Altura: " + altura +
+                                "\n Inicial: " + inicial +
+                                "\n Mayor de edad: " + mayorDeEdad);
+    }
+}     
+                </code></pre>
+            </div><br>
+
+            <h3 aos-init data-aos="fade-left">Operadores <br> Operadores aritmeticos</h3>
+            <p aos-init data-aos="fade-up">Son símbolos especiales que se utilizan para realizar operaciones matemáticas sobre variables y valores.</p>
 
             <div class="consola" aos-init data-aos="fade-up">
                 <pre><code>
@@ -178,25 +242,275 @@ public class Main {
         int numero1;
         int numero2;
         int suma,resta,producto,division;
-        
+
         System.out.print("Ingrese primer numero: ");
         numero1=e.nextInt();
         System.out.print("Ingrese segundo numero: ");
         numero2=e.nextInt();
-        
+
+        // Operador de adición
         suma=numero1+numero2;
+
+        // Operador de sustracción
         resta=numero1-numero2;
+
+        // Operador de multiplicación
         producto=numero1*numero2;
+
+        // Operador de división
         division=numero1/numero2;
-        
-        System.out.println("La suma de los dos numeros ingresados es: "+suma);
-        System.out.println("La resta de los dos numeros ingresados es: "+resta);
-        System.out.println("El producto de los dos numeros ingresados es: "+producto);
-        System.out.println("La division de los dos numeros ingresados es: "+division);
+
+        System.out.println("\nLa suma de los dos numeros ingresados es: "+ suma +
+                           "\nLa resta de los dos numeros ingresados es: "+ resta +
+                           "\nEl producto de los dos nu1meros ingresados es: " + producto +
+                           "\nLa division de los dos numeros ingresados es: "+ division );
     }
 }
                 </code></pre>
-            </div>
+            </div><br>
+
+            <h3 aos-init data-aos="fade-left">Operadores <br> Operadores de asignación</h3>
+            <p aos-init data-aos="fade-up">Son asignaciones que se dan a  valores a variables. <br> 
+                Además de la asignación básica (=), <br>
+                existen operadores compuestos que combinan una operación aritmética con la asignación.<br>
+
+            <div class="consola" aos-init data-aos="fade-up">
+                <pre><code>
+public class Main {
+    public static void main(String[] args) {
+        int numero = 10;
+        System.out.println("El valor de numero es: " + numero);
+
+        // Operador +=
+        numero = numero + 1;
+        System.out.println("Ahora el valor de numero es: " + numero);
+
+        // Operador -=
+        numero = numero - 2;
+        System.out.println("Ahora el valor de numero es: " + numero);
+
+        // Operador *=
+        numero = numero * 3;
+        System.out.println("Ahora el valor de numero es: " + numero);
+
+        // Operador /=
+        numero = numero / 4;
+        System.out.println("Ahora el valor de numero es: " + numero);
+    }
+}
+                </code></pre>
+            </div><br>
+
+            <h3 aos-init data-aos="fade-left">Operadores <br> Operadores relacionales </h3>
+            <p aos-init data-aos="fade-up">Son símbolos utilizados para comparar dos valores y determinar la relación entre ellos. <br>
+                Devuelven un resultado booleano (true o false) según se cumpla la condición especificada.</p>
+
+            <div class="consola" aos-init data-aos="fade-up">
+                <pre><code>
+public class Main {
+    public static void main(String[] args) {
+        int edadLuis = 25;
+        int edadSilvia = 30;
+
+        // Operador ==
+        System.out.println("¿La edad de Juan es igual a la edad de María?");
+        System.out.println(edadLuis == edadSilvia);
+
+        // Operador !=
+        System.out.println("¿La edad de Juan es diferente a la edad de María?");
+        System.out.println(edadLuis != edadSilvia);
+
+        // Operador >
+        System.out.println("¿La edad de Juan es mayor que la edad de María?");
+        System.out.println(edadLuis > edadSilvia);
+
+        // Operador <
+        System.out.println("¿La edad de Juan es menor que la edad de María?");
+        System.out.println(edadLuis < edadSilvia);
+
+        // Operador >=
+        System.out.println("¿La edad de Juan es mayor o igual que la edad de María?");
+        System.out.println(edadLuis >= edadSilvia);
+
+        // Operador <=
+        System.out.println("¿La edad de Juan es menor o igual que la edad de María?");
+        System.out.println(edadLuis <= edadSilvia);
+    }
+}
+                </code></pre>
+            </div><br>
+
+            
+            <h3 aos-init data-aos="fade-left">Operadores <br> Operadores lógicos</h3>
+            <p aos-init data-aos="fade-up">Son herramientas fundamentales que permiten combinar o modificar valores booleanos para realizar evaluaciones más complejas.</p>
+
+            <div class="consola" aos-init data-aos="fade-up">
+                <pre><code>
+public class Main {
+    public static void main(String[] args) {
+        boolean esEstudiante = true;
+        int edad = 18;
+
+        //Operador AND (&&)
+        boolean esMayorDeEdadYEstudiante = edad >= 18 && esEstudiante;
+        System.out.println("¿Es mayor de edad y estudiante? \n" + esMayorDeEdadYEstudiante);
+
+        //Operador OR ()
+        boolean esMayorDeEdadOEstudiante = edad >= 18  esEstudiante;
+        System.out.println("¿Es mayor de edad o estudiante? \n" + esMayorDeEdadOEstudiante);
+
+        //Operador NOT (!)
+        boolean noEsEstudiante = ! esEstudiante;
+        System.out.println("¿No es estudiante? \n" + noEsEstudiante);
+    }
+}
+                </code></pre>
+            </div><br>
+
+            <h3 aos-init data-aos="fade-left">Estructura de control <br> Condicional If - Else</h3>
+            <p aos-init data-aos="fade-up">Es una condicional que permite ejecutar diferentes bloques de código según el resultado de una condición booleana. 
+                Esto significa que además de ejecutar un bloque de código cuando la condición es verdadera (if), 
+                también se puede especificar qué hacer cuando la condición es falsa (else).</p>
+
+            <div class="consola" aos-init data-aos="fade-up">
+                <pre><code>
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner e = new Scanner(System.in);
+
+        System.out.print("Ingrese su edad: ");
+        int edad = e.nextInt();
+
+        // Condicional If - Else
+        if (edad >= 18) {
+            System.out.println("Eres mayor de edad.");
+        } else {
+            System.out.println("Eres menor de edad.");
+        }
+    }
+}
+                </code></pre>
+            </div><br>
+
+            <h3 aos-init data-aos="fade-left">Estructura de control <br> Condicional Switch - Case</h3>
+            <p aos-init data-aos="fade-up">Es una condicional para evaluar el valor de una variable o expresión , <br> 
+                y ejecutar diferentes bloques de código según el valor de esa variable. <br>
+                Es una alternativa a la serie de instrucciones if-else if-else cuando se tienen múltiples condiciones a evaluar sobre una misma variable.</p>
+
+            <div class="consola" aos-init data-aos="fade-up">
+                <pre><code>
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner e = new Scanner(System.in);
+
+        System.out.print("Ingrese un número del 1 al 7: ");
+        int dia = e.nextInt();
+        String nombreDia;
+
+        // Condicional Switch - Case
+        switch (dia) {
+            case 1:
+                nombreDia = "Lunes";
+                break;
+            case 2:
+                nombreDia = "Martes";
+                break;
+            case 3:
+                nombreDia = "Miércoles";
+                break;
+            case 4:
+                nombreDia = "Jueves";
+                break;
+            case 5:
+                nombreDia = "Viernes";
+                break;
+            case 6:
+                nombreDia = "Sábado";
+                break;
+            case 7:
+                nombreDia = "Domingo";
+                break;
+            default:
+                nombreDia = "Día no válido";
+                break;
+        }
+
+        System.out.println("El día " + dia + " es " + nombreDia);
+    }
+}
+                </code></pre>
+            </div><br>
+
+            <h3 aos-init data-aos="fade-left">Estructura de control <br> Condicional For</h3>
+            <p aos-init data-aos="fade-up">Es una construcción de bucle que permite ejecutar un bloque de código un número específico de veces.</p>
+
+            <div class="consola" aos-init data-aos="fade-up">
+                <pre><code>
+public class Main {
+    public static void main(String[] args) {
+        int suma = 0;
+
+        // Condicional For
+        for (int i = 1; i <= 10; i++) {
+            suma += i;
+            System.out.println(suma);
+        }
+        System.out.println("La suma de los primeros 10 números es: " + suma);
+
+    }
+}
+                </code></pre>
+            </div><br>
+
+            <h3 aos-init data-aos="fade-left">Estructura de control <br> Condicional While</h3>
+            <p aos-init data-aos="fade-up">Es una construcción de bucle que se repite mientras una condición específica sea verdadera.</p>
+
+            <div class="consola" aos-init data-aos="fade-up">
+                <pre><code>
+public class Main {
+    public static void main(String[] args) {
+        int numero = 1;
+
+        while (numero <= 5) {
+            System.out.println("Número: " + numero);
+            numero++;
+        }
+
+        System.out.println("El valor de numero es: " + numero);
+    }
+}
+                </code></pre>
+            </div><br>
+
+            <h3 aos-init data-aos="fade-left">Estructura de control <br> Condicional Do - While</h3>
+            <p aos-init data-aos="fade-up">Es una construcción de bucle similar a la estructura while, <br> 
+                pero con una diferencia fundamental: la condición se evalúa al final del bucle en lugar de al principio.</p>
+
+            <div class="consola" aos-init data-aos="fade-up">
+                <pre><code>
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner e = new Scanner(System.in);
+        int numero;
+
+        do {
+            System.out.print("Ingrese un número mayor a cero: ");
+            numero = e.nextInt();
+        } while (numero <= 0);
+
+        System.out.println("Número válido ingresado: " + numero);
+    }
+}
+
+                </code></pre>
+            </div><br>
+
         </div>
         
         <!-- Materia 2 -->
