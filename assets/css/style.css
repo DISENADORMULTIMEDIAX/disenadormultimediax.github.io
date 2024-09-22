@@ -1,0 +1,586 @@
+/* Estilos generales */
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+/* Estilos del cuerpo */
+
+body, html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    margin: 0;
+    font-family: "Poppins","Montserrat";
+    background-color: #0C0C0C;
+    line-height: 1.6;  
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #111;
+    color: #fff;
+    padding: 20px 20px 28px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 100%; 
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Estilos del menu */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Estilos del logo */
+.logo {
+    font-family: "Elianto";
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #f1f1f1;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu ul li {
+    position: relative;
+    width: 120px;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    padding: 0px 2px 0px 2px;
+}
+
+.menu ul li a:hover {
+    color: #f4f4f4;
+    text-decoration: none;
+    padding: 0px 2px 0px 2px;
+}
+
+/* Estilos para el menú desplegable */
+.menu-desplegable {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    padding: 10px 0;
+    border-color: #fff;
+    border-radius: 0 0 5px 5px;
+}
+
+.menu ul li:hover .menu-desplegable {
+    position: absolute;
+    display: table-row;
+    padding: 8px 16px 8px 16px;
+}
+
+.menu ul li.active .menu-desplegable {
+    display: flex;
+}
+
+.menu-desplegable li {
+    margin: 0;
+}
+
+.menu-desplegable li a {
+    padding: 10px 20px;
+    display: none;
+}
+
+.menu-desplegable li a:hover {
+    background-color: #2d2d2d;
+    border-radius: 6px;
+}
+
+/* Estilos para las secciones */
+section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+section h1 {
+    font-family: "Montserrat";
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #f1f1f1;
+}
+
+section h2 {
+    font-family: "Montserrat";
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #f1f1f1;
+}
+
+section h3 {
+    font-family: "Montserrat";
+    font-size: 1.8rem;
+    color: #f1f1f1;
+    margin-bottom: 20px;
+}
+
+section h4 {
+    font-size: 1.5rem;
+    color: #f1f1f1;
+}
+
+section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color:#f1f1f1;
+}
+
+/* Estilos para la sección Home */
+#home {
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+    font-family: "Montserrat";
+    color: #f1f1f1;
+}
+
+#home h2 {
+    font-size: 4rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #f1f1f1;  
+}
+
+#home p {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+}
+
+/* Estilos para la sección Sobre mi */
+#sobremi {
+    text-align: center;
+}
+
+/* Estilos para la sección Habilidad */
+.habilidad {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(5, 5, 5, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .habilidad h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .habilidad-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .skill {
+    font-family: "Poppins";
+    width: calc(33% - 20px);
+    background-color: #111;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+/* Estilos para la sección Materia */
+#materia {
+    background-color:333;
+}
+
+.materia {
+  margin-bottom: 20px;
+  color:h3h3h3;
+}
+
+/* Estilos para las imágenes */
+.perfil img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 0.3rem solid rgb(255, 255, 255);
+    overflow: hidden;
+    padding: 0.3rem;
+    border-radius: 50%;
+    transition: border-color 0.3s, transform 0.3s; 
+}
+
+.perfil img:hover {
+    border-color: rgb(51, 51, 51); 
+    transform: scale(1.05); 
+}
+
+.temario {
+    max-width: calc(100% - 5px);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.temario img {
+    max-width: 80%;
+    height: auto;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+    gap: 30px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.galeria img {
+    width: 88%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow:
+    8px 0px 8px rgba(10, 10, 10,0.5), 
+    -0px 0px 0px rgb(10, 10, 10,0.5),
+    0px 8px 8px rgb(10, 10, 10,0.5), 
+    0px -0px 0px rgb(10, 10, 10,0.5);
+}
+
+.galeria img:hover {
+    border-color: rgb(10, 10, 10); 
+    transform: scale(1.05);
+}
+
+/* Estilos para la consola */
+.consola {
+    background-color: #111; 
+    color: #f1f1f1;
+    padding: 20px; 
+    overflow-x: auto; 
+    max-width: 800px; 
+    margin: 20px auto; 
+    border: 5px solid #333; 
+    border-radius: 5px; 
+    font-family: "Console"; 
+}
+
+.info-contacto {
+    text-align: left;
+}
+
+/* Estilos para pre dentro de .consola */
+.consola pre {
+    margin: 0; 
+    white-space: pre-wrap;
+    text-align: left;
+}
+
+/* Estilos para code dentro de .consola */
+.consola code {
+    display: block; 
+    white-space: pre; 
+    overflow-x: auto; 
+    color: inherit; 
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.rrss ul li{
+    display: inline-block;
+    position: flex;
+    text-decoration: none;
+    color: #000;
+    padding: 0px 10px 0px 10px;
+}
+
+/* Estilos para redes sociales*/
+.rrss a{
+    font-family: "Montserrat";
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.rrss a:hover {
+    color: #666;
+}
+
+.rrss .fab {
+    color: #f1f1f1;
+}
+
+.rrss .fab:hover {
+    color: #666;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #111111;
+    color: #fff;
+    padding: 20px 0;
+    position: static;
+    width: 100%;
+    z-index: 1000;
+    display: block;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Media query para dispositivos con un ancho máximo de 768 */
+@media only screen and (min-width: 340px) and (max-width: 768px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body, html {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; 
+    }
+
+    .header {
+        padding: 10px 20px 15px 20px;
+        top: 0; 
+        position: fixed; 
+        width: 100%;
+        z-index: 1000;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+        font-family: "Elianto";
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        padding-left: 0;
+        margin: 0px 10px 0px 10px ;
+        text-align: center;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+        align-items: center; 
+        
+    }
+
+    .menu ul li {
+        flex: 0 0 calc(25% - 1px); 
+        margin-right: 8px; 
+        text-align: center;
+    }
+
+    .menu ul li:hover .menu-desplegable {
+        position: absolute;
+        display: table-row;
+        padding: 5px 10px 5px 10px;
+        color: #fff;
+    }
+
+    .menu ul li:nth-child(n+4) {
+        margin-top: 8px;
+    }
+
+    .menu ul li a {
+        transform: none;
+        display: block;
+        font-size: 0.9rem; 
+        text-decoration: none; 
+        color: #fff; 
+        border-radius: 5px; 
+        transition: background-color 0.3s ease, color 0.3s ease;
+        font-family: 'Roboto', sans-serif; 
+        font-weight: 400;
+        letter-spacing: 0.5px;
+    }
+
+    .menu ul li:hover .menu-desplegable {
+        position: absolute;
+        display: table-row;
+        padding: 5px 10px 5px 10px;
+    }
+    
+    .menu ul li.active .menu-desplegable {
+        display: flex;
+    }
+
+    section {
+        padding: 50px 20px;
+    }
+
+    section h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    section p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    #home {
+        margin-top: 133px;
+    }
+
+    #home h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    #home p {
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+
+    #sobremi {
+        margin-top: 133px;
+    }
+
+    .perfil img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .skill {
+        width: calc(100% - 20px);
+        background-color: #111;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .galeria {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .rrss {
+        width: calc(50% - 20px);
+    }
+}
+
+/* Media query para dispositivos con un ancho máximo de 1100px */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+
+    body, html {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; 
+    }
+
+
+    .logo {
+        font-family: "Elianto";
+        font-size: 1.3rem;
+
+    }
+
+    .menu {
+        flex-direction: column; 
+        justify-content: center; 
+        margin: 0px 10px 0px 10px ;
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu ul {
+        align-items: center;
+        display: flex;
+    }
+
+    .menu ul li {
+        text-align: center;
+        margin-right: 10px; 
+        transition: transform 0.3s ease; 
+        text-align: center;
+    }
+
+    .menu ul li:hover .menu-desplegable {
+        position: absolute;
+        display: table-row;
+        padding: 5px 10px 5px 10px;
+    }
+
+    .menu ul li a {
+
+        display:inline-block;
+        font-size: 0.8rem; 
+        text-decoration: none; 
+        color: #fff;
+        padding: 4px 4px; 
+        border-radius: 5px; 
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500; 
+        letter-spacing: 0.5px; 
+    }
+
+    .menu ul li:hover .menu-desplegable {
+        position: absolute;
+        display: table-row;
+        padding: 5px 10px 5px 10px;
+    }
+    
+    .menu ul li.active .menu-desplegable {
+        display: flex;
+    }
+
+    .perfil img {
+        width: 600px;
+        height: 600px;
+    }
+
+    .skill {
+        width: calc(50% - 20px);
+        background-color: #111;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+    .galeria {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+        gap: 30px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
